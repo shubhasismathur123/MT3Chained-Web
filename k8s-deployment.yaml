@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: mt3chained-web
-             # jetacr.azurecr.io/mt3chained-web:59
+             # jetacr.azurecr.io/mt3chained-web:59 
         image: acrabc061523.azurecr.io/mt3chained-web:latest
         ports:
         - containerPort: 80
