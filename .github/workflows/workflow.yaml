@@ -7,7 +7,11 @@ on:
 
 env:
   APP_NAME: githubactions
-  LOGIN_SERVER: acrabc061523.azurecr.io
+  LOGIN_SERVER: acrabc061523.azurecr.iR_NAME `
+         -replace "", $AKS_NAME `
+                -replace "", $AKS_RESOURCE_GROUP `
+                       -replace "default", "default"
+                           } | Set-Content $destinato
   CLUSTER_NAME: aks-abc
   CLUSTER_RESOURCE_GROUP: azure-abc-rg
   NAMESPACE: default
@@ -21,7 +25,7 @@ jobs:
       - name: Check Out Repo 
         uses: actions/checkout@v2
 
-      # Connect to Azure Container Registry (ACR)
+      # Connect to Azure Container Registry (ACR).
       - name: ACR login
         uses: azure/docker-login@v1
         with:
